@@ -1,0 +1,20 @@
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export GOPATH=~/go
+
+source ~/.bashrc
+
+alias vs='cd ~/fortress_development && vagrant ssh'
+alias vup='cd ~/fortress_development && vagrant up'
+alias gomako='cd ~/fortress_development/development_projects/mako'
+alias gomakodev='cd ~/fortress_development/development_projects/mako && source conf/dev.conf && grunt server'
+alias gomakostage='cd ~/fortress_development/development_projects/mako && source conf/staging.conf && grunt server'
+alias gomakoprod='cd ~/fortress_development/development_projects/mako && source conf/prod.conf && grunt server'
+alias goasm='cd ~/fortress_development/development_projects/asm'
+alias goapid='cd ~/fortress_development/development_projects/apid'
+alias gowhitelabel='cd ~/fortress_development/development_projects/whitelabel'
+alias gomakoapi='cd ~/fortress_development/development_projects/makoapi'
+alias godbschema='cd ~/fortress_development/development_projects/db-schema'
+alias gofilterd='cd ~/fortress_development/development_projects/filterd'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -1,0 +1,43 @@
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+export GOPATH=~/go
+
+source ~/.bashrc
+
+alias gomako='cd ~/fortress_development/development_projects/mako'
+alias runmakodev='cd ~/fortress_development/development_projects/mako && source conf/vm.conf && source conf/dev.conf && bundle exec grunt server'
+alias runmakostage='cd ~/fortress_development/development_projects/mako && source conf/vm.conf && source conf/staging.conf && bundle exec grunt server'
+alias runmakoprod='cd ~/fortress_development/development_projects/mako && source conf/vm.conf && source conf/prod.conf && bundle exec grunt server'
+alias goasm='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/asm &&export GOPATH=`pwd` && export GOBIN=$GOPATH/bin && export PATH=$PATH:$GOBIN && ./bin/build'
+alias runasmapi='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/asm && source example.conf && ./build/asmapi'
+alias runlandingpage='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/asm && source example.conf && ./bin/landingpage'
+alias runlinkservice='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/asm && source example.conf && ./bin/linkservice'
+alias runasmapi='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/asm && source example.conf && ./bin/asmapi'
+alias goapid='cd ~/fortress_development/development_projects/apid && source venv/bin/activate'
+alias runapid='cd ~/fortress_development/development_projects/apid && source venv/bin/activate && twistd -ny apidSingle.py'
+alias gomakoapi='cd ~/fortress_development/development_projects/makoapi && source venv/bin/activate'
+alias runmakoapi='cd ~/fortress_development/development_projects/makoapi && source venv/bin/activate && bin/run'
+alias gowhitelabel='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/whitelabel'
+alias runwhitelabel='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/whitelabel && source example.conf && ./bin/build && ./build/whitelabel'
+alias gocrudalerts='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/crud_alerts'
+alias runcrudalerts='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/crud_alerts && source example.conf && ./bin/build && ./build/crud_alerts'
+alias gomailsettings='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/mail_settings'
+alias runmailsettings='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/mail_settings && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source mail_settings_development.env && ./bin/build && ./build/mail_settings'
+alias gomakostats='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/makostats'
+alias runmakostats='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/makostats && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source makostats_development.env && ./bin/build && ./build/makostats'
+alias goipvet='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/ipvettingd'
+alias runipvet='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/ipvettingd && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source example.env && ./bin/build && ./build/ipvettingd'
+alias gochaos='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/chaos && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source chaos_development.env'
+alias runchaos='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/chaos && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source chaos_development.env && ./bin/build && ./build/chaos'
+alias goauthzd='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/authzd'
+alias runauthzd='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/authzd && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source authzd_development.env && ./bin/build && ./build/authzd'
+alias gogandalf='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/gandalf && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin'
+alias rungandalf='cd ~/fortress_development/development_projects/go/src/github.com/sendgrid/gandalf && export GOPATH=/home/vagrant/fortress_development/development_projects/go && export GOROOT=/usr/local/go && export GOBIN=/home/vagrant/fortress_development/development_projects/go/bin && source example.conf && ./bin/build && ./build/gandalf'
+alias godbschema='cd ~/fortress_development/development_projects/db-schema'
+alias gofilterd='cd ~/fortress_development/development_projects/filterd'
+alias goboss='cd ~/fortress_development/development_projects/boss'
+alias runboss='cd ~/fortress_development/development_projects/boss && rails s -p 50021'
+alias pp='python -mjson.tool'
+alias ack='~/bin/ack'
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
